@@ -13,7 +13,7 @@ public class Monster {
     }
 
     void stealTheStickFrom(Warrior warrior) {
-        if(!warrior.isImmobile()){
+        if(!warrior.isImmobile){
             warrior.becomeImmobile();
             System.out.println(this.name+" stealed the stick from "+warrior.name);
         }else{

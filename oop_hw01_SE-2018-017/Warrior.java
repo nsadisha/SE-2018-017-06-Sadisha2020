@@ -26,8 +26,4 @@ public class Warrior{
         System.out.print(this.name+" ");
         System.out.println(this.isImmobile?"immobile.":"not immobile.");
     }
-
-    Boolean isImmobile(){
-        return this.isImmobile;
-    }
 }

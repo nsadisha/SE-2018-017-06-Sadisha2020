@@ -17,9 +17,9 @@ public class MyGame {
         
         // checkng warriors
         warrior1.checkImmobile();
+	warrior2.checkImmobile();
 
         // steal the stick from warrior 2
-        monster.stealTheStickFrom(warrior2);
         monster.stealTheStickFrom(warrior2);
 
         // checkng warriors
