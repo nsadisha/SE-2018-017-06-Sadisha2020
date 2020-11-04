@@ -17,7 +17,7 @@ public class Monster {
             warrior.becomeImmobile();
             System.out.println(this.name+" stealed the stick from "+warrior.name);
         }else{
-            System.out.println(warrior.name+" is doesn't have a stick.");
+            System.out.println(warrior.name+" doesn't have a stick.");
         }
     }
 }
