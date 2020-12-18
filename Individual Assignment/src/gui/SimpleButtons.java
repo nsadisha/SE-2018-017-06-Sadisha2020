@@ -14,9 +14,11 @@ public class SimpleButtons extends JFrame{
     private JLabel label;
 
     public SimpleButtons(){
+        //JFrame configurations
         this.setContentPane(panel);
         this.setTitle("SimpleButtons");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setting JFrame location on the screen
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int x = screenSize.width/2 - 150;
         int y = screenSize.height/2 - 175;
@@ -49,6 +51,7 @@ public class SimpleButtons extends JFrame{
         });
     }
 
+    //this is to update the label on button clicks
     private void setLabel(String s){
         this.label.setText(s);
     }
