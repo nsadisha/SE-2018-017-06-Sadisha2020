@@ -19,10 +19,10 @@ public class Box {
         this.Weight = Weight;
     }
 
-    int calculateVolume(){
+    public int calculateVolume(){
         return this.L1* this.W1* this.H1;
     }
-    double calculateDensity(){
+    public double calculateDensity(){
         int vol = this.calculateVolume();
         return this.Weight/ (double) vol;
     }
