@@ -9,4 +9,4 @@ Uploading the code to github is better than creating a pdf of a code and submiti
     - [Interfaces](oop_hw02_SE-2018-017/src/interfaces)
     - [Test Class](oop_hw02_SE-2018-017/src/testClass)
     - [Classes](oop_hw02_SE-2018-017/src/classes)
-- [Individual Assignment](Individual Assignment)
+- [Individual Assignment](Individual_Assignment)
