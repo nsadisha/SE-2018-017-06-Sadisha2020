@@ -42,10 +42,13 @@ public class UOKSE_Course {
             average += student.getGrade(exam);
         }
         try{
+            if(enrolled==0){throw new ArithmeticException();}
             average /= enrolled;
             return average;
         }catch (ArithmeticException e){
             System.out.println("No one has enrolled with this course.");
+        }catch (Exception e){
+            System.out.println("An error occurred in calculating the average!");
         }
         return 0;
     }
@@ -60,9 +63,11 @@ public class UOKSE_Course {
         course.addStudent("Phil Phailure", 3);
 
         //searching for students and giving grades
-        try{
+        try {
             course.findStudent("Sally Smarty").addGrade(1, 100);
             course.findStudent("Phil Phailure").addGrade(1, 60);
+        }catch(NullPointerException e){
+            System.out.println("Name not found!");
         }catch (Exception e){
             System.out.println("Something went wrong!");
         }
