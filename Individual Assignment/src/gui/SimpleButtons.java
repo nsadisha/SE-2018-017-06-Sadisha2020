@@ -51,12 +51,14 @@ public class SimpleButtons extends JFrame{
         });
     }
 
-    //this is to update the label on button clicks
+    //update the label on button clicks
     private void setLabel(String s){
         this.label.setText(s);
     }
 
+    //main
     public static void main(String[] args) {
+        //call the gui
         SimpleButtons gui = new SimpleButtons();
         gui.setSize(300, 350);
         gui.setVisible(true);

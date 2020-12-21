@@ -1,16 +1,19 @@
 package uokse;
 
 public class UOKSE_Course {
-    int capacity;
-    UOKSE_Student roster[];
+    static int capacity;
+    UOKSE_Student[] roster;
+    //class variable
     static int enrolled;
 
-    public UOKSE_Course(int capacity){
-        this.capacity = capacity;
-        roster = new UOKSE_Student[this.capacity];
+    //constructor
+    public UOKSE_Course(int _capacity){
+        capacity = _capacity;
+        roster = new UOKSE_Student[capacity];
         enrolled = 0;
     }
 
+    //add students to the course
     public boolean addStudent(String name, int num_exams){
         if( enrolled<this.roster.length ){
             UOKSE_Student tempStudent = new UOKSE_Student(name,num_exams);
@@ -22,6 +25,7 @@ public class UOKSE_Course {
             return false;
         }
     }
+    //find students from name and returns the UOK_Student object
     public UOKSE_Student findStudent(String name){
         for(UOKSE_Student student : this.roster){
             if(student.getName().equalsIgnoreCase(name)){
@@ -30,6 +34,7 @@ public class UOKSE_Course {
         }
         return null;
     }
+    //returns the average grade for all students in a specific exam
     public double computeAverage(int exam){
         double average = 0;
         for(int i=0; i<enrolled; i++){
@@ -47,6 +52,7 @@ public class UOKSE_Course {
 
     //main method
     public static void main(String[] args) {
+        //creating course object
         UOKSE_Course course = new UOKSE_Course(30);
 
         //adding students
@@ -56,7 +62,7 @@ public class UOKSE_Course {
         //searching for students and giving grades
         try{
             course.findStudent("Sally Smarty").addGrade(1, 100);
-            course.findStudent("Phil Phailure").addGrade(1, 100);
+            course.findStudent("Phil Phailure").addGrade(1, 60);
         }catch (Exception e){
             System.out.println("Something went wrong!");
         }
